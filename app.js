@@ -18,8 +18,8 @@ db.serialize(function () {
 });
 
 // GET
-app.get("/", () => (req, res) => {
-  res.sendFile("index.html");
+app.get('/', function (req, res) {
+  res.sendFile('index.html');
 });
 
 // POST
@@ -54,4 +54,6 @@ app.post("/login", () => (req, res) => {
   });
 });
 
-app.listen(3000)
+app.listen(3000, () => {
+  console.log('Port: 3000 has risen');
+})
